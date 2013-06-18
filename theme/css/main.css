@@ -1,119 +1,275 @@
-body         { background-color: #e1e1e1; font-family: 'Georgia', serif; font-size: 16px; color: #444; }
-a            { color: #004B6B; }
-a:hover      { color: #6D4100; }
-.box-mat {  border-radius: 10px; -moz-border-radius: 10px; margin: 80px auto; width: 900px; background-color: #f4f4f4;}
-.box-outer   { width: 780px; padding-top: 15px; padding-bottom: 15px; margin: 0px auto; background: url(../img/body.gif) repeat-y; }
-.box         { border-radius: 10px; -moz-border-radius: 10px; width: 650px; padding: 25px; margin: 0px auto; background-color: white; }
-h2, h3, h4   { font-family: 'Garamond', 'Georgia', serif; font-weight: normal; color: #004B6B;}
-h1           { margin: 0 0 30px 0; background: no-repeat center;
-               height: 165px; }
-h1 span      { display: none; }
-.banner      { font-size: 75px; margin: 40px 0 5px 0; 
-               font-family: 'Gabriela', cursive;
-               text-align: center;}
-.banner a    {text-decoration: none;}
-h2           { font-size: 30px; margin: 15px 0 5px 0; }
-h3           { font-size: 24px; margin: 15px 0 5px 0; }
-h4           { font-size: 19px; margin: 15px 0 5px 0; }
-textarea, code, tt,
-pre          { font-family: 'Inconsolata', sans-serif, monospace!important; 
-             color: #000; font-size: 14px ; background: #f4f4f4; }
-pre          { padding: 7px 30px; margin: 15px 15px; line-height: 1.3; 
-             border-style:solid; border-width:1px; border-color:#bbb;}
-
-code, tt     {padding: 1px 4px 1px 4px; border-style:solid; border-width:1px; border-color:#bbb;}
-
-.ig          { color: #888; }
-p            { line-height: 1.2; }
-ul           { margin: 15px 0 15px 0; padding: 0px; list-style: none; line-height: 1.2; }
-ul li:before { content: "\00BB \0020"; color: #888; position: absolute; margin-left: -19px; }
-ol           { line-height: 1.2; margin: 15px 0 15px 15px; padding: 15px; }
-blockquote   { margin: 0; font-style: italic; color: #444; }
-.footer      { font-size: 13px; color: #888; text-align: center; margin-top: 25px; }
-.more        { text-align: right; margin-top: 0; font-size: 0.9em; font-style: italic; }
-.nav         { text-align: center; }
-.nav a       { font-style: italic; }
-.backnav     { float: right; color: #444; font-style: italic;
-               margin: 5px 0 0 0; font-size: 0.9em; }
-.message     { background: #DEEBF3; color: #004B6B; padding: 5px 30px;
-               margin: 10px -30px; }
-.actions     { margin-top: 0; }
-.twitter:before { background: no-repeat; content: " ";
-                  float: right; width: 64px; height: 64px;
-                  margin: -25px 0 0 0; padding: 0 0 10px 10px; }
-.twitter li  { margin: 15px 0; line-height: 1.2; font-size: 15px; }
-.twitter li:before { content: "♯"; padding-left: 4px; }
-.twitter .meta, .twitter .meta a { color: #888; font-size: 13px; }
-table        { border: 1px solid black; border-collapse: collapse;
-               margin: 15px 0; }
-td, th       { border: 1px solid black; padding: 4px 10px;
-               text-align: left; }
-th           { background: #eee; font-weight: normal; }
-
-td input     { border: none; padding: 0; }
-
-table.archives, .archives td, .archives th {border: none;}
-/*Navigation*/
-
-div.bottom {
-    background: url(../img/bottom.gif) no-repeat;
-    height: 48px;
-    padding-top:0;
-    text-align: center;
-    top: 0;
-    left: 0;
-    width: 780px;
-    margin: 0px auto;
+@font-face {
+  font-family: 'Goudy Bookletter 1911';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Goudy Bookletter 1911'), local('GoudyBookletter1911'), url('../fonts/Goudy Bookletter 1911.ttf') format('truetype');
 }
 
-div.navigation {
-    background: url(../img/menubar.gif) no-repeat;
-    height: 48px;
-    padding: 2px 0px 0px 0px;
-    text-align: right;
-    top: 0;
-    left: 0;
-    width: 780px;
-    margin: 0px auto;
+header, footer, section, nav {
+    display: block;
 }
 
-div.navigation a   { text-decoration: none;  font-weight: bold; font-size: 24px; padding: 10px;}
-div.navigation ol  { list-style-type: none; margin: 0px 25px 0px 25px; padding-top: 10px; }
-div.navigation li  { display: inline; padding: 0; content:none;}
+body { 
+  max-width: 1400px;
+  min-width: 800px;
+  margin: 0;
+  padding: 0;
+  font-size: .8em; 
+  line-height: 1.3;
+  color: #111; 
+  background: white url(../images/bg.png) repeat scroll;
+} 
+ 
+h1, h2, h3, h4, h5, h6 { 
+  margin: 1em 0 .5em 0; 
+  line-height: 1.2; 
+  font-weight: bold; 
+  font-family: 'Goudy Bookletter 1911';
+  color: #111;
+  font-style: normal; 
+} 
+h1 { 
+  font-size: 1.75em; 
+} 
+h2 { 
+  font-size: 1.5em; 
+} 
+h2.page_title { 
+  text-align: center;
+  text-decoration: none;
+  font-size: 2em; 
+} 
+    h2.page_title:before {
+        content: '~ ';
+    }
+    h2.page_title:after {
+        content: ' ~';
+    }
+h3 { 
+  font-size: 1.25em; 
+  margin-left: 15px;
+} 
+h4 { 
+  font-size: 1em; 
+  margin-left: 30px;
+} 
+ 
+ul, ol { 
+  margin: .75em 0 .75em 32px; 
+  padding: 0; 
+} 
+ 
+p { 
+  margin: .75em; 
+} 
 
-/*Social Navigation*/
-div.social-navigation a   { text-decoration: none;  font-size: 40px; padding: 10px;}
-div.social-navigation ol  { margin: 0; padding: 0;}
-div.social-navigation li  { display: inline; padding: 0; content:none;}
-div.social-navigation {
-                float: left; background-color: #f4f4f4; 
-                padding-top:0;
-                text-align: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 999;
-                width: 100%;
-                height: 50px;
-              }
+pre, blockquote {
+    border: 2px dotted grey;
+    margin: 15px 10px;
+    padding: 5px;
+    scroll: auto;
+}
 
-.current a{color: #666}
-/* social */
-.social      {margin:10px 0 10px 0; font-size: 40px; text-align: center;}
-.social a    {margin: 10px 20px 5px 20px; color: #777; text-decoration: none;}
-.social a:hover {color: #004B6B;}
+table {
+    border: 1px dashed grey;
+    padding: 0;
+    margin: 15px 10px;
+}
+    td, th {
+        margin: 0;
+        padding: 2px 5px;
+        border: 1px dotted grey;
+    }
 
-/*posts*/
-.posts ol, .posts ul, .posts li  {list-style-type: none; padding: 0; margin:0;}
-.posts li {padding-bottom: 30px;}
-.post h2 { font-size: 40px; }
-.post h2 a {text-decoration: none;}
-.post-info abbr {font-size: 15px; color: #555; font-style: italic;}
-footer.post-info {padding-bottom: 10px; background: url(../img/hr.gif) bottom left no-repeat;}
-article .archive{margin-top: 10px; margin-bottom: 10px;}
-.entry-content{margin-top: 10px; margin-bottom: 40px;}
-.archive-entry-title a{font-size: 40px; text-decoration: none;}
+hr {
+    height: 0;
+    width: 60%;
+    margin: 15px auto;
+    color: transparent;
+    border-bottom: 2px dotted grey;
+}
 
-/* Inset, by Dan Eden */ 
-hr { border: 0; height: 0; border-top: 1px solid rgba(0, 0, 0, 0.1); 
-              border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+address { 
+  margin: .75em 0; 
+  font-style: normal; 
+} 
+ 
+a { 
+  text-decoration: underline; 
+} 
+a:link { 
+  color: #11C; 
+  color: #222;
+} 
+a:visited { 
+  color: inherit; 
+} 
+a:hover, a:focus, a:active { 
+  color: slategrey; 
+} 
+ 
+a img { 
+  border: none; 
+} 
+ 
+em { 
+  font-style: italic; 
+} 
+strong { 
+  font-weight: bold; 
+} 
+ 
+
+
+div#page {
+    width: 75%;
+    margin: 5% auto 5% auto;
+	background: #EFEFEF;
+	border: 1px solid grey;
+    border-radius: 10px;
+}
+
+
+    header#header {
+        width: 100%;
+    	clear: both;
+	    text-align: center;
+        border-bottom: 1px solid grey;
+    }
+
+        #header>h1 {
+            font-family: 'Goudy Bookletter 1911';
+            font-style: italic;
+            font-size: 3em;
+            padding: 0;
+            margin: 15px 0 15px 0;
+        }
+            #header>h1:before {
+                content: '~ ';
+            }
+            #header>h1:after {
+                content: ' ~';
+            }
+            #header>h1>a {
+                text-decoration: inherit;
+                color: inherit;
+            }
+
+    nav#menu {
+        width: 100%;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid grey;
+        text-align: center;
+    }
+
+        nav#menu a {
+            display: inline-block;
+            text-decoration: none;
+            margin: 2px;
+            padding: 1px;
+            border: 1px solid grey;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        nav#menu a:hover, nav#menu a.active {
+            border: 1px solid black;
+            color: black;
+        }
+
+    section#content {
+	    float: left;
+    	width: 75%;
+        border-right: 1px solid grey;
+    }
+        section#content img {
+            max-width: 98%;
+            max-height: 98%;
+        }
+
+	    section#content article.post {
+            margin: 10px;
+	    }
+            article.post h2.post_title {
+                margin: 20px 0 0 0;
+                padding: 0;
+            }
+
+            article.post details.meta {
+                margin: 5px 0 0 0;
+                padding: 0;
+            }
+                article.post details.meta p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+        section.post_content, section.page_content {
+            margin: 10px;
+        }
+
+            .post details.meta {
+                margin: 0;
+                padding: 2px 3px; 
+                border-bottom: 1px dotted grey;
+                font-size: .8em;
+            }
+
+        #content a#all_tags {
+            text-align: center;
+            font-size: 1.8em;
+        }
+        #content ul#tag_list {
+            text-align: center;
+            list-style-type: none;
+        }
+        #content dl#archives dt {
+            margin-left: 40px;
+        }
+        #content dl#archives dd {
+            text-align: center;
+        }
+
+        #content>nav.pagination {
+           width: 100%;
+           //font-weight: bolder;
+           font-size: 14px;
+           font-family: 'Goudy Bookletter 1911';
+           border-top: 1px solid grey;
+           text-align: center; 
+        }
+        nav.pagination a {
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+    aside#sidebar {
+	    float: right;
+        width: 24%;
+    }
+        #sidebar .widget {
+            margin-bottom: 10px;
+        }
+            #sidebar .widget ul {
+                list-style-type: none;
+                margin: auto auto auto 15px;
+            }
+                #sidebar .widget ul li:before {
+                    content: '» ';
+                }
+
+            #sidebar .widget ul a.more {
+                display: inline-block;
+                padding-top: 5px;
+                text-decoration: none;
+            }
+    
+
+    footer#footer {
+	    clear:both;
+	    border-top: 1px solid grey;
+	    padding: 5px 20px;
+    }
+
